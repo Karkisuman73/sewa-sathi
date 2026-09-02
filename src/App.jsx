@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Footer from './components/Footer';
 import About from './pages/About';
 import Contactus from './pages/Contact';
+import NotFound from './pages/PageNotFound';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       path="/services/:category/:service"
       element={<ServiceDetails />}
     />
+    <Route path="*" element={<NotFound />} />
   </Routes>
   <Footer/>
 
