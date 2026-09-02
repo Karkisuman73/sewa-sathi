@@ -2,10 +2,12 @@ import { Menu, Search, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import MegaMenu from "./MegaMenu";
 import { services } from "../data/services";
+import SearchServices from "./Search";
 
 const Navbar = () => {
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
@@ -60,15 +62,19 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <button
-            aria-label="Search"
-            className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100"
-          >
-            <Search size={19} />
-          </button>
+        <button
+  onClick={() => {
+    setSearchOpen((prev) => !prev);
+    setMegaMenuOpen(false);
+  }}
+  aria-label="Search"
+  className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100"
+>
+  {searchOpen ? <X size={19} /> : <Search size={19} />}
+</button>
 
           <a
-            href="#contact"
+            href="/contact"
             className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700"
           >
             Get Started
@@ -95,6 +101,13 @@ const Navbar = () => {
         />
       </div>
 
+        <SearchServices
+    isOpen={searchOpen}
+    onClose={() => setSearchOpen(false)}
+    services={services}
+  />
+
+
       {mobileMenuOpen && (
         <div className="border-t border-slate-100 bg-white lg:hidden">
           <nav className="mx-auto max-w-7xl px-4 py-4 sm:px-6">
@@ -112,6 +125,8 @@ const Navbar = () => {
                 }`}
               />
             </button>
+
+
 
             {megaMenuOpen && (
               <div className="mt-1 rounded-xl bg-slate-50 p-3">
@@ -181,7 +196,7 @@ const Navbar = () => {
             </a>
 
             <a
-              href="#contact"
+              href="/contact"
               onClick={() => setMobileMenuOpen(false)}
               className="mt-2 block rounded-lg bg-blue-600 px-4 py-3 text-center font-semibold text-white hover:bg-blue-700"
             >

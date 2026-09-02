@@ -80,7 +80,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 border-t border-slate-800 pt-6 text-sm text-slate-500">
-          © {new Date().getFullYear()} ServiceHub. All rights reserved.
+          © {new Date().getFullYear()} SewaSathi. All rights reserved.
         </div>
       </div>
     </footer>
