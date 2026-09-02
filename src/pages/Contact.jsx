@@ -146,7 +146,7 @@ const Contactus = () => {
                   </p>
 
                   <p className="mt-1 text-sm text-slate-500">
-                    +977 98XXXXXXXX
+                    +977 9812345678
                   </p>
                 </div>
               </div>

@@ -10,7 +10,7 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="bg-gradient-to-b from-white to-slate-50 py-16 sm:py-20">
+    <section id="faq" className="bg-gradient-to-b from-white to-slate-50  sm:py-10">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <div className="relative text-center">
           <div className="absolute left-1/2 top-0 -translate-x-1/2">
@@ -84,15 +84,6 @@ const FAQ = () => {
               </div>
             );
           })}
-        </div>
-
-        <div className="mt-12 text-center">
-          <p className="text-sm text-slate-500">
-            Still have questions?{" "}
-            <a href="/contact" className="font-medium text-blue-600 hover:underline">
-              Contact us
-            </a>
-          </p>
         </div>
       </div>
     </section>

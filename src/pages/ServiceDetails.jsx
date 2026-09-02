@@ -153,7 +153,7 @@ const ServiceDetails = () => {
               </div>
             </div>
 
-            <div className="mt-10 rounded-2xl bg-slate-50 p-6 sm:p-8">
+            {/* <div className="mt-10 rounded-2xl bg-slate-50 p-6 sm:p-8">
               <h3 className="text-xl font-semibold text-slate-900">
                 Looking for {selectedService.title}?
               </h3>
@@ -170,7 +170,7 @@ const ServiceDetails = () => {
                 Explore Services
                 <ArrowRight size={17} />
               </Link>
-            </div>
+            </div> */}
 
           </div>
 

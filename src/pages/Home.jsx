@@ -3,6 +3,7 @@ import HowItWorks from '../components/HowItWorks'
 import Hero from '../components/Hero'
 import FAQ from '../components/FAQ'
 import Categories from '../components/Categories'
+import CTA from '../components/CTA'
 
 
 const Home = () => {
@@ -10,8 +11,10 @@ const Home = () => {
     <div>
         <Hero/>
         <Categories/>
+         <HowItWorks />
+      <CTA/>
         <FAQ/>
-      <HowItWorks />
+     
 
      
     </div>
