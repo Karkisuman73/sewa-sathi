@@ -31,10 +31,10 @@ search for services, and view service details through an easy-to-use and respons
 
 
 ## Getting Started
-git clone <https://github.com/Karkisuman73/sewa-sathi.git>
-cd sewa-sathi
-npm install
-npm run dev
+- git clone <https://github.com/Karkisuman73/sewa-sathi.git>
+- cd sewa-sathi
+- npm install
+- npm run dev
 
 ## Technical Approach
 
