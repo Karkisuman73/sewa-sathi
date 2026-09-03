@@ -342,28 +342,6 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-20 lg:py-24">
-        <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
-
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Ready to discover useful services?
-          </h2>
-
-          <p className="mx-auto mt-4 max-w-xl leading-7 text-slate-600">
-            Explore SewaSathi and find the information you need, all in one
-            place.
-          </p>
-
-          <a
-            href="#services"
-            className="mt-8 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
-          >
-            Explore Services
-            <ArrowRight size={17} />
-          </a>
-
-        </div>
-      </section>
 
     </main>
   );

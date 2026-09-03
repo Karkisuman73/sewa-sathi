@@ -5,23 +5,19 @@ const ServiceCard = ({ service }) => {
   return (
     <article className="group rounded-2xl border border-slate-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg">
 
-      {/* Category */}
       <span className="inline-flex rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
         {service.category}
       </span>
 
-      {/* Main Title */}
       <h3 className="mt-4 text-xl font-semibold text-slate-900">
         {service.category} Services
       </h3>
 
-      {/* Description */}
       <p className="mt-3 text-sm leading-6 text-slate-500">
         Explore {service.category.toLowerCase()} related services and
         professional support.
       </p>
 
-      {/* Sub Services */}
       <div className="mt-5 space-y-2">
         {service.subServices.map((subService) => {
           const slug = subService.title
@@ -41,7 +37,6 @@ const ServiceCard = ({ service }) => {
         })}
       </div>
 
-      {/* Explore */}
       <Link
         to={`/services/${service.category.toLowerCase()}/${service.subServices[0].title
           .toLowerCase()

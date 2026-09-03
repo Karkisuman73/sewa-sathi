@@ -9,7 +9,7 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
 
-  // Close mobile menu on escape key
+  
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === 'Escape') {
@@ -22,7 +22,7 @@ const Navbar = () => {
     return () => document.removeEventListener('keydown', handleEscape);
   }, []);
 
-  // Prevent body scroll when mobile menu is open
+  
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -46,10 +46,9 @@ const Navbar = () => {
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-sm font-bold text-white">
               S
             </div>
-            <span className="hidden sm:inline">SewaSathi</span>
+            <span className="">SewaSathi</span>
           </a>
 
-          {/* Desktop Navigation */}
           <nav className="hidden items-center gap-7 lg:flex">
             <button
               onClick={() => setMegaMenuOpen((prev) => !prev)}
@@ -79,14 +78,13 @@ const Navbar = () => {
             </a>
 
             <a
-              href="/#faq"
+              href="/contact"
               className="text-sm font-medium text-slate-700 hover:text-blue-600"
             >
-              FAQ
+              Contact Us
             </a>
           </nav>
 
-          {/* Desktop Right Actions */}
           <div className="hidden items-center gap-3 lg:flex">
             <button
               onClick={() => {
@@ -107,7 +105,6 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile/Tablet Menu Button */}
           <button
             onClick={() => {
               setMobileMenuOpen(true);
@@ -120,7 +117,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mega Menu - Desktop */}
         <div className="relative hidden lg:block">
           <MegaMenu
             isOpen={megaMenuOpen}
@@ -129,7 +125,6 @@ const Navbar = () => {
           />
         </div>
 
-        {/* Search Overlay */}
         <SearchServices
           isOpen={searchOpen}
           onClose={() => setSearchOpen(false)}
@@ -137,13 +132,12 @@ const Navbar = () => {
         />
       </header>
 
-      {/* Mobile/Tablet Side Drawer */}
       <div
         className={`fixed inset-0 z-[60] lg:hidden transition-all duration-300 ${
           mobileMenuOpen ? "pointer-events-auto" : "pointer-events-none"
         }`}
       >
-        {/* Backdrop */}
+
         <div
           className={`absolute inset-0 bg-black transition-opacity duration-300 ${
             mobileMenuOpen ? "opacity-50" : "opacity-0"
@@ -151,13 +145,11 @@ const Navbar = () => {
           onClick={() => setMobileMenuOpen(false)}
         />
 
-        {/* Drawer */}
         <div
           className={`absolute right-0 top-0 h-full w-full max-w-sm bg-white shadow-2xl transition-transform duration-300 ease-in-out ${
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          {/* Drawer Header */}
           <div className="flex h-16 items-center justify-between border-b border-slate-200 px-4">
             <a
               href="/"
@@ -178,9 +170,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Drawer Content */}
           <nav className="flex h-[calc(100%-4rem)] flex-col overflow-y-auto px-4 py-4">
-            {/* Search in drawer */}
             <div className="mb-4">
               <div className="relative">
                 <input
@@ -199,7 +189,6 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Services Accordion */}
             <div className="mb-2">
               <button
                 onClick={() => setMegaMenuOpen((prev) => !prev)}
@@ -250,7 +239,6 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Navigation Links */}
             <a
               href="/#how-it-works"
               onClick={() => setMobileMenuOpen(false)}
@@ -268,14 +256,13 @@ const Navbar = () => {
             </a>
 
             <a
-              href="/#faq"
+              href="/contact"
               onClick={() => setMobileMenuOpen(false)}
               className="block rounded-lg px-3 py-3 font-medium text-slate-700 hover:bg-slate-50 transition-colors"
             >
-              FAQ
+              Contact Us
             </a>
 
-            {/* CTA Button */}
             <a
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}

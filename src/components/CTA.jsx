@@ -7,7 +7,6 @@ const CTA = () => {
       <div className="mx-auto max-w-7xl overflow-hidden rounded-2xl bg-blue-600 px-5 py-10 sm:rounded-3xl sm:px-8 sm:py-12 lg:px-14 lg:py-14">
         <div className="flex flex-col gap-8 sm:gap-10 lg:flex-row lg:items-center lg:justify-between">
 
-          {/* Content */}
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-wider text-blue-100 sm:text-sm">
               Need Help?

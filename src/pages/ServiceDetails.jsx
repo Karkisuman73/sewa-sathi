@@ -214,20 +214,6 @@ const ServiceDetails = () => {
 
         </div>
       </section>
-
-
-      <section className="border-t border-slate-100 py-8">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <Link
-            to="/#services"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 transition hover:text-blue-600"
-          >
-            <ArrowLeft size={17} />
-            Back to Services
-          </Link>
-        </div>
-      </section>
-
     </main>
   );
 };
